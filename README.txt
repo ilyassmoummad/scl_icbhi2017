@@ -1,1 +1,1 @@
-code will be released soon
+code will be on november 7
