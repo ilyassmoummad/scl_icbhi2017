@@ -1,0 +1,6 @@
+numpy==1.19.5
+pandas==0.25.3
+torch==1.9.1+cu111
+torchaudio==0.9.1
+torchinfo==1.6.3
+librosa==0.8.1
