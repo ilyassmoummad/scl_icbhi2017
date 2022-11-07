@@ -11,12 +11,12 @@ Put the data files in the data folder
 ## Pretrained models:
 Put the pretrained pth files in the panns folder
 
+## Metadata:
+```metadata.py``` creates a metadata file in the data folder
+
 ## Training:
 Launch : ```python3 main.py --method METHOD --bs BS``` \
 Replace **METHOD** by the desired training method (**sl** for cross entropy, **scl** for supervised contrastive, or **hybrid** for a combination of both), and **BS** with the desired batch size (128 being the default value)
-
-## Pipeline Overview
-![Pipeline](https://github.com/ilyassmoummad/scl_icbhi2017/blob/main/figures/pipeline_overview.png)
 
 ## Quantitative Results
 We optimized hyperparameters for CNN6, and we simply report CNN10 from scratch and pretrained CNN14 scores on ICBHI without any hyperparameter tuning:
