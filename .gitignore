@@ -1,6 +1,0 @@
-.gitignore
-__pycache__
-data/*
-panns/*
-!data/readme.txt
-!panns/readme.txt
