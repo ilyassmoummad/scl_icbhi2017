@@ -172,6 +172,6 @@ def linear_scl(encoder, checkpoint, classifier, train_loader, val_loader, val_tr
             best_epoch_acc = i
             best_val_acc = val_acc
         
-    print(f"best score:{format(best_icbhi_score, '.4f')} (se:{format(best_se, '.4f')} sp:{format(best_sp, '.4f')}) at epoch {format(best_epoch_icbhi, '.4f')}")
+    print(f"best score is {format(best_icbhi_score, '.4f')} (se:{format(best_se, '.4f')} sp:{format(best_sp, '.4f')}) at epoch {best_epoch_icbhi}")
 
     return train_losses, val_losses, train_se_scores, train_sp_scores, train_icbhi_scores, train_acc_scores, val_se_scores, val_sp_scores, val_icbhi_scores, val_acc_scores
