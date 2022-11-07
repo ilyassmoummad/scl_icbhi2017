@@ -1,6 +1,6 @@
 # Supervised Contrastive Learning for Respiratory Sound Classification
 -----
-This is the pytorch implementation of our work [Supervised Contrastive Learning for Respiratory Sound Classification](https://arxiv.org/abs/2210.16192)
+This is the official pytorch implementation of our work [Supervised Contrastive Learning for Respiratory Sound Classification](https://arxiv.org/abs/2210.16192)
 
 ## Dependencies:
 Launch : ```pip install -r requirements.txt```
@@ -12,11 +12,11 @@ Put the data files in the data folder
 Put the pretrained pth files in the panns folder
 
 ## Training:
-Launch : ```python3 main.py --method METHOD --bs BS```
-Replace **METHOD** by the desired training method (**sl** for cross entropy, **scl** for supervised contrastive, or **hybrid** for a combination of both), and **BS** by the desired batch size (128 being the default value)
+Launch : ```python3 main.py --method METHOD --bs BS``` \
+Replace **METHOD** by the desired training method (**sl** for cross entropy, **scl** for supervised contrastive, or **hybrid** for a combination of both), and **BS** with the desired batch size (128 being the default value)
 
 ## Pipeline Overview
-![Pipeline](../figures/pipeline_overview.png)
+![Pipeline](https://github.com/ilyassmoummad/scl_icbhi2017/blob/main/figures/pipeline_overview.png)
 
 ## Quantitative Results
 We optimized hyperparameters for CNN6, and we simply report CNN10 from scratch and pretrained CNN14 scores on ICBHI without any hyperparameter tuning:
@@ -37,12 +37,13 @@ We optimized hyperparameters for CNN6, and we simply report CNN10 from scratch a
 |          | Hybrid | 80.73(3.86) | 34.96(3.59) | 57.85(0.48) |             |              |
 
 
-## To cite thid work:
-```@misc{scl_icbhi2017,
+## To cite this work:
+```
+@misc{scl_icbhi2017,
       title={Supervised Contrastive Learning for Respiratory Sound Classification}, 
       author={Ilyass Moummad and Nicolas Farrugia},
       year={2022},
       eprint={2210.16192},
       archivePrefix={arXiv},
-      primaryClass={cs.SD}
-}```
+      primaryClass={cs.SD}}
+```
