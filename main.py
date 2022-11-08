@@ -65,7 +65,7 @@ val_ds = ICBHI(data_path=args.datapath, metadatafile=args.metadata, duration=arg
 train_loader = torch.utils.data.DataLoader(train_ds, batch_size=args.bs, shuffle=True)
 val_loader = torch.utils.data.DataLoader(val_ds, batch_size=args.bs, shuffle=False)
 
-### OPTIMISER
+### Optimizer
 if METHOD == 'sl':
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.wd)
 elif METHOD == 'scl':

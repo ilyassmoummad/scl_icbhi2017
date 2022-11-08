@@ -15,11 +15,22 @@ Put the pretrained pth files in the panns folder
 ```metadata.py``` creates a metadata file in the data folder
 
 ## Training:
-Launch : ```python3 main.py --method METHOD --bs BS``` \
-Replace **METHOD** by the desired training method (**sl** for cross entropy, **scl** for supervised contrastive, or **hybrid** for a combination of both), and **BS** with the desired batch size (128 being the default value)
+```main.py``` launches the training
+### Arguments:
+```--method METHOD```: the training method METHOD, ``sl`` for cross entropy, ``scl`` for supervised contrastive, and ``hybrid`` for a combination of both. \
+```--backbone BACKBONE```: the backbone to be used, ``cnn6``, ``cnn10`` or ``cnn14``. \
+```--scratch```: to train from scratch (when this argument is not encountered, the models are intiailized using AudioSet weights). \
+```--lr LR```: the learning rate for training. \
+```--bs BS```: the batch size. \
+Check ```args.py``` for more arguments.
+### Reproducibility:
+To reproduce our results, keep all arguments by default value except the learning rate (and the generic arguments such as the number of workers to be used and the desired device to train on). \
+To train from scratch, launch the following script : ```python main.py --scratch --lr 1e-3 --backbone BACKBONE --method METHOD``` using the desired training method and backbone. \
+To train using AudioSet intialization, launch the following script : ```python main.py --lr 1e-4 --backbone BACKBONE --method METHOD``` using the desired training method and backbone.
 
 ## Quantitative Results
-We optimized hyperparameters for CNN6, and we simply report CNN10 from scratch and pretrained CNN14 scores on ICBHI without any hyperparameter tuning:
+We optimized hyperparameters for CNN6, and we simply report CNN10 from scratch and pretrained CNN14 scores on ICBHI without any hyperparameter tuning. \
+We report results over 10 identical runs:
 
 | Backbone | Method |     _Sp_    |     _Se_    |     _Sc_    | # of Params | Ext. Dataset |
 |:--------:|:------:|:-----------:|:-----------:|:-----------:|:-----------:|:------------:|
